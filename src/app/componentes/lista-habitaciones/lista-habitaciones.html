@@ -1,0 +1,29 @@
+<div style="padding: 20px; font-family: Arial, sans-serif;">
+  <div style="background: #1a2a6c; color: white; padding: 15px; border-radius: 10px; text-align: center;">
+    <h1>Gestión de Habitaciones - Grupo B</h1>
+    <p>Integrantes: Murillo Andrea, Sisalima Keyla, Arevalo Andy</p>
+  </div>
+
+  <div style="margin-top: 20px; border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #f9f9f9;">
+    <table style="width: 100%; border-collapse: collapse;">
+      <thead style="background: #b21f1f; color: white;">
+        <tr>
+          <th style="padding: 10px;">Número</th>
+          <th style="padding: 10px;">Tipo</th>
+          <th style="padding: 10px;">Tarifa</th>
+          <th style="padding: 10px;">Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let h of habitaciones" style="text-align: center; border-bottom: 1px solid #ddd;">
+          <td style="padding: 10px;">{{ h.numero }}</td>
+          <td style="padding: 10px;">{{ h.tipo }}</td>
+          <td style="padding: 10px;">${{ h.tarifa }}</td>
+          <td style="padding: 10px; font-weight: bold;" [style.color]="h.estado === 'Disponible' ? 'green' : 'red'">
+            {{ h.estado }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
