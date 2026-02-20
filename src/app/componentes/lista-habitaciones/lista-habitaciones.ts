@@ -4,8 +4,8 @@ import { Habitacion } from '../../modelos/habitacion.model';
 
 @Component({
   selector: 'app-lista-habitaciones',
-  templateUrl: './lista-habitaciones.component.html',
-  styleUrls: ['./lista-habitaciones.component.css']
+  templateUrl: './lista-habitaciones.html',
+  styleUrls: ['./lista-habitaciones.css']
 })
 export class ListaHabitacionesComponent implements OnInit {
   habitaciones: Habitacion[] = [];

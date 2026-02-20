@@ -1,12 +1,15 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+// Importamos tu componente de la carpeta componentes
+import { ListaHabitacionesComponent } from './componentes/lista-habitaciones/lista-habitaciones';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, ListaHabitacionesComponent], // Aquí le damos permiso de usarse
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
-export class App {
-  protected readonly title = signal('frontend-hotel');
-}
+export class AppComponent {
+  title = 'frontend-hotel';
+  }
